@@ -1,0 +1,20 @@
+<app-navigation></app-navigation>
+<div classe="modele-table">
+  <h1>Liste Depot</h1>
+  <table>
+      <tr id="header">
+          <th>Numero du client</th>
+          <th>Valeur</th>
+          <th>Date</th>
+          <th></th>
+      </tr>
+
+        <tr *ngFor="let re of liste ">
+          <td>{{re['num']}} </td>
+          <td>{{re.valeur}} </td>
+          <td>{{re.daty}} </td>
+          <td><button class="form-button" (click) = "validation(re.idMobileMoney)">Valider</button></td>
+        </tr>
+  </table>
+</div>
+

@@ -1,0 +1,35 @@
+<app-navigation></app-navigation>
+<div class="module-acceuil" *ngIf="etat">
+  <div class="zone-text" >
+    <h2>Bienvenue dans l'application<br>ALLO APP</h2>
+    <p>Vous étes l'opérateur <b>{{nom}}</b></p>
+    <p>{{prefixe}} ** *** ** </p>
+    <button class="form-button" (click) = "displayCheck()">Modifier</button>
+  </div>
+</div>
+<div class="module-acceuil" *ngIf="check">
+  <div class="zone-text" >
+    <div class="formulaire">
+      <h2>Confirmation</h2>
+      <label>Saisir mots de passe:</label>
+      <input type="password" [(ngModel)] = "mdp" />
+      <button class="form-button" (click) = "checkMdp()">Valider</button>
+      {{message}}
+    </div>
+  </div>
+</div>
+<div class="module-acceuil"  *ngIf="update">
+  <div class="zone-text">
+    <div class="formulaire">
+      <h2>Modifier votre mot de passe </h2>
+      <label>Operateur</label>
+      <input type="text" [(ngModel)] = "nom" />
+      <label>Prefixe</label>
+      <input type="text" [(ngModel)] = "prefixe" />
+      <label>Mots de passe</label>
+      <input type="password" [(ngModel)] = "mdp" />
+      <button class="form-button" (click) = "updateO()">Modifier</button>
+    </div>
+  </div>
+</div>
+

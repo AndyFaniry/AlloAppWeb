@@ -1,0 +1,23 @@
+<app-navigation></app-navigation>
+<div classe="modele-table">
+  <h1>Liste des Codes credit</h1>
+  <table>
+      <tr id="header">
+        <th>Code</th>
+        <th>Valeur</th>
+        <th></th>
+      </tr>
+      <tr *ngFor="let cr of credit ">
+        <td>{{cr.code}}</td>
+        <td>{{cr.valeur}}</td>
+        <td><button (click) = "remove(cr.idCode)">Supprimer</button></td>
+      </tr>
+  </table>
+</div>
+<div class="module-formulaire">
+  <h2>Insertion nouveau credit</h2>
+  <div classe="modeleform">
+    <p></p><input type="text" [(ngModel)] = "valeur" placeholder="valeur"/><button (click) = "ajouter()">Valider</button>
+  </div>
+  {{message}}
+</div>

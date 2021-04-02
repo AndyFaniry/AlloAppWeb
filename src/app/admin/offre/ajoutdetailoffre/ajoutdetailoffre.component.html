@@ -1,0 +1,34 @@
+<div fxFlex="30">
+  <app-navigation></app-navigation>
+</div>
+<div fxFlex="80">
+  <div class="liste">
+    <div fxLayout='column' class="zero">
+      <div fxFlex="33" class="one" >Ajouter details offre
+        <div class="add" *ngIf="appel">
+          <p>Ajouter offre Appel</p>
+          <label>Valeur TTC</label>
+          <input type="text" [(ngModel)] = "valeur" />
+          <label>Code</label>
+          <input type="text" [(ngModel)] = "puM" />
+          <label>Prix</label>
+          <input type="text" [(ngModel)] = "puA" />
+          <button (click) = "ajouterAppel()">Ajouter</button>
+        </div>
+        <div class="add" *ngIf="internet">
+          <p>Ajouter offre Internet</p>
+          <label>Megaoctets</label>
+          <input type="text" [(ngModel)] = "mega" />
+          <button (click) = "ajouterInternet()">Ajouter</button>
+        </div>
+        <div class="add" *ngIf="sms">
+            <p>Ajouter offre Sms</p>
+            <label>Nombre de sms</label>
+            <input type="text" [(ngModel)] = "nbsms" />
+            <button (click) = "ajouterSms()">Ajouter</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+

@@ -1,0 +1,70 @@
+<app-navigation></app-navigation>
+<div class="module-formulaire"  *ngIf="!appel">
+  <div class="formulaire">
+    <h2>Changer offre Appel</h2>
+     <label>Valeur TTC</label>
+    <input type="text" [(ngModel)]="valeur" />
+    <label>Meme operateur</label>
+    <input type="text" [(ngModel)]="puM" />
+    <label>Autre operateur</label>
+    <input type="text" [(ngModel)]="puA" />
+    <button class="form-button" (click)="updateAppel()">Changer</button>
+  </div>
+</div>
+<div class="module-formulaire"  *ngIf="!internet">
+  <div class="formulaire">
+    <h2>Changer offre Internet</h2>
+    <label>Megaoctets</label>
+    <input type="text" [(ngModel)]="mega" />
+    <button class="form-button" class="form-button" (click)="updateInternet()">Changer</button>
+  </div>
+</div>
+<div class="module-formulaire"  *ngIf="!sms">
+  <div class="formulaire">
+    <h2>Changer offre Sms</h2>
+    <label>Nombre de sms</label>
+    <input type="text" [(ngModel)]="nbsms" />
+    <button (click)="updateSms()">Changer</button>
+  </div>
+</div>
+<div class="details-offre">
+  <div *ngIf="appels && appel" >
+    <div class="pricing-card"  *ngFor="let item of appels">
+      <h3 class="pricing-card-header">APPEL</h3>
+      <h3><sup>Ar</sup>{{item['valeurTTC']}}  TTC</h3>
+      <ul>
+        <li><strong>{{item.puMemeOp}}  Ar/s</strong><br>vers la meme Operateur</li>
+        <li><strong>{{item.puAutreOp}}  Ar/s</strong><br>vers les autres Operateurs</li>
+      </ul>
+      <button class="order-btn" (click)="updaterAppel(item.idDetailOffreAppel)">Changer</button>
+      <button class="order-btn" (click)="remove('../../admin/offre/appel/'+item.idDetailOffreAppel)">Supprimer</button>
+      </div>
+  </div>
+  <div *ngIf="internets && internet" >
+    <div class="pricing-card"  *ngFor="let item of appels">
+      <h3 class="pricing-card-header">Internet</h3>
+      <h3>somme Mo</h3>
+      <ul>
+        <li><strong>{{item.mo}} Mo</strong><br>Internet</li>
+        <li><strong>- Mo</strong><br>Facebook</li>
+      </ul>
+      <button class="order-btn" (click)="updaterInternet(item.idOInternet)">Changer</button>
+      <button class="order-btn" (click)="remove('../../admin/offre/internet/'+item.idOInternet)">Supprimer</button>
+    </div>
+  </div>
+  <div *ngIf="smss && sms">
+    <div class="pricing-card"   *ngFor="let item of smss">
+      <h3 class="pricing-card-header">Sms</h3>
+      <h3>-</h3>
+      <ul>
+        <li><strong>{{item['nbrSms']}}</strong><br> Sms</li>
+        <li>-<br> -</li>
+      </ul>
+      <button class="order-btn" (click)="updaterSms(item.idOInternet)">Changer</button>
+      <button class="order-btn" (click)="remove('../../admin/offre/sms/'+item.idOInternet)">Supprimer</button>
+    </div>
+  </div>
+</div>
+
+
+

@@ -1,0 +1,12 @@
+<app-navigation></app-navigation>
+<div class="details-offre">
+    <div class="pricing-card" *ngFor="let of of offre ">
+      <h3 class="pricing-card-header">{{of.nom}}</h3>
+      <div class="price"><sup>Ar</sup>{{of.prix}}</div>
+      <ul>
+        <li><strong>{{of.code}}</strong></li>
+        <li>validiter: <strong>{{of.validite}} jour(s)</strong></li>
+      </ul>
+      <button  class="order-btn" [routerLink]="'../../admin/offre/detail/'+of.idOffre" routerLinkActive="active" routerDirection="root">Voire détails</button>
+      </div>
+</div>

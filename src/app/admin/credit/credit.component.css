@@ -1,0 +1,116 @@
+
+.modele-table{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+table {
+  position: absolute;
+  left: 60%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-collapse: collapse;
+  width: 800px;
+  height: 50px;
+  border: 1px solid #bdc3c7;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+}
+
+tr {
+  transition: all .2s ease-in;
+  cursor: pointer;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #042331;
+  height: 30px;
+}
+
+#header {
+  color: #042331;
+  height: 30px;
+  border: 2px solid #042331;
+}
+
+h1 {
+  left: 60%;
+  height: 70px;
+  font-weight: 100;
+  text-align: center;
+  background-color:#063146;
+  color: #fff;
+  padding: 10px 0px;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+  transform: scale(1.02);
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+}
+.module-formulaire{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	flex-direction: column;
+	margin-left: 250px;
+  margin-top: 50px;
+}
+
+*{
+	font-family: sans-serif;
+	box-sizing: border-box;
+}
+
+.modeleform {
+	width: 500px;
+	border: 2px solid#042331;
+	background: #fff;
+	border-radius: 15px;
+}
+
+h2 {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+input {
+	border: 2px solid #ccc;
+	width: 95%;
+	padding: 10px;
+	border-radius: 5px;
+}
+button {
+	float: right;
+	background: #042331;
+	padding: 10px 15px;
+	color: #fff;
+	border-radius: 5px;
+	margin-right: 10px;
+	border: none;
+}
+button:hover{
+	opacity: .7;
+}
+
+
+h1 {
+	text-align: center;
+	color: #fff;
+}
+
+a {
+	float: right;
+	background: #555;
+	padding: 10px 15px;
+	color: #fff;
+	border-radius: 5px;
+	margin-right: 10px;
+	border: none;
+	text-decoration: none;
+}
+a:hover{
+	opacity: .7;
+}

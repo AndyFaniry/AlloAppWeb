@@ -1,0 +1,18 @@
+<div class="module-formulaire">
+  <div class="formulaire">
+    <h2>INSCRIPTION</h2>
+    <label>Nom</label>
+    <input type="text" [(ngModel)] = "nom" />
+    <label>Email</label>
+    <input type="email" [(ngModel)] = "mail" />
+    <label>Operateur</label>
+    <select [(ngModel)]="idOperateur">
+      <option *ngFor="let op of operateur" [ngValue]="op.idOperateur">{{op.nom}}</option>
+    </select>
+    <label>Mots de passe</label>
+    <input type="password" [(ngModel)] = "mdp" />
+    <button class="form-button" (click) = "signup()">S'inscrire</button>
+  </div>
+</div>
+
+

@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+<div class="menu">
+  <div class="sidebar">
+    <header>{{nom}}</header>
+    <ul>
+      <li><a [href]="url+'admin/compte'"><i class="fas fa-qrcode"></i>Compte</a></li>
+      <li><a [href]="url+'admin/depot'"><i class="fas fa-link"></i>Depot</a></li>
+      <li><a [href]="url+'admin/retrait'"><i class="fas fa-stream"></i>Retrait</a></li>
+      <li><a [href]="url+'admin/credit'"><i class="fas fa-calendar-week"></i>Credit</a></li>
+      <li><a [href]="url+'admin/offre'"><i class="far fa-question-circle"></i>Offre</a></li>
+      <li><app-deconnect></app-deconnect></li>
+    </ul>
+  </div>
+</div>
