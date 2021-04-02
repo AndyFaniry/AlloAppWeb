@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import {LoginComponent} from './page/login/login.component';
-import {AcceuilComponent} from './page/acceuil/acceuil.component';
 import {InscriptionComponent} from './page/inscription/inscription.component';
 import {LoginadminComponent} from './admin/loginadmin/loginadmin.component';
 import {CompteadminComponent} from './admin/compteadmin/compteadmin.component';
