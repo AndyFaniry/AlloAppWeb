@@ -13,7 +13,7 @@ import {DetailoffreComponent} from './admin/offre/detailoffre/detailoffre.compon
 import {AjoutdetailoffreComponent} from './admin/offre/ajoutdetailoffre/ajoutdetailoffre.component';
 import {CreditComponent} from './admin/credit/credit.component';
 const routes: Routes = [
-  { path: '', component: AcceuilComponent},
+  { path: '', component: LoginComponent},
   { path: 'admin', component: LoginadminComponent},
   { path: 'admin/compte', component: CompteadminComponent},
   { path: 'admin/retrait', component: RetraitComponent},

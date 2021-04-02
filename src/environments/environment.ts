@@ -11,7 +11,7 @@ export let options = {
     'Access-Control-Allow-Origin' : '*'
   }
 };
-export const base_url="http://localhost:4200/";
+export const base_url="https://alloappweb.herokuapp.com/";
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

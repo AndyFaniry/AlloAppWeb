@@ -7,4 +7,4 @@ export let options = {
     'Access-Control-Allow-Origin' : '*'
   }
 };
-export const base_url="http://localhost:4200/";
+export const base_url="https://alloappweb.herokuapp.com/";
